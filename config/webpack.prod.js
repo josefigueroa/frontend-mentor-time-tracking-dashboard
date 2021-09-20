@@ -46,7 +46,16 @@ const rulesForJS = {
   }
 };
 
-const rules = [rulesForFonts, rulesForImg, rulesForCss, rulesForJS];
+const rulesForData =   {
+  test: /\.json$/,
+  loader: 'json-loader',
+  type: 'asset/resource',
+  generator: {
+    filename: 'core/data.json'
+  }
+};
+
+const rules = [rulesForFonts, rulesForImg, rulesForCss, rulesForJS, rulesForData];
 
 const prodConfig = {
   mode: 'production',

@@ -2,10 +2,10 @@
 
 @each $key, $value in $theme-fonts {
   @font-face {
-    font-family: Poppins;
+    font-family: Rubik;
     src: 
-      local('Poppins #{$value}'), local('Poppins-#{$value}'),
-      url('#{$fonts-path}/poppins/Poppins-#{$value}.ttf') format('truetype');
+      local('Rubik #{$value}'), local('Rubik-#{$value}'),
+      url('#{$fonts-path}/Rubik/Rubik-#{$value}.ttf') format('truetype');
     font-style: normal;
     font-weight: #{$key};
     text-rendering: optimizeLegibility;

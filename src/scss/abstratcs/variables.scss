@@ -1,22 +1,20 @@
 //BREAKPOINTS
-// 576px, 768px, 992px, 1200px, 1440px, 1444px
+// 576px, 768px, 992px, 1200px, 1440px
 $breakpoints-up: (
   'small': '36em',
 	'medium': '48em',
 	'large': '62em',
 	'xlarge': '75em',
-	'xxlarge': '90em',
-	'xxxlarge': '90.25em'
+	'xxlarge': '90em'
 );
 
-// 575px, 767px, 991px, 1199px, 1439px, 1443px
+// 575px, 767px, 991px, 1199px, 1439px
 $breakpoints-down: (
 	'small': '35.9375em',
 	'medium': '47.9375em',
 	'large': '61.9375em',
 	'xlarge': '74.9375em',
-	'xxlarge': '89.9375em',
-	'xxxlarge': '90.1875em',
+	'xxlarge': '89.9375em'
 );
 
 $spacer: 1rem;
@@ -30,16 +28,56 @@ $spacer: (
   5: ($spacer * 3)
 );
 
+//Primary Colors
+$blue: hsl(246, 80%, 60%);
+$softBlue: hsl(195, 74%, 62%);
+$orange: hsl(15, 100%, 70%);
+$red: hsl(348, 100%, 68%);
+$limeGreen: hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$yellow: hsl(43, 84%, 65%);
+
+//Neutral Colors
+$white: hsl(360, 100%, 100%);
+$darkLight: hsl(235, 46%, 20%);
+$dark: hsl(226, 43%, 10%);
+$paleBlue: hsl(236, 100%, 87%);
+$blueMarguerite: hsl(235, 45%, 61%);
+
+$primary: $blue;
+$secondary: $white;
+$info: $softBlue;
+$info-alt: $violet;
+$success: $limeGreen;
+$danger: $red;
+$warning: $yellow;
+$customBlue: $paleBlue;
+$customBlueMarguerite: $blueMarguerite;
+
+
+$theme-colors: (
+	'primary': $primary,
+	'secondary': $secondary,
+	'info': $info,
+	'info-alt': $info-alt,
+	'success': $success,
+	'danger': $danger,
+	'warning': $warning,
+	'white': $white,
+	'dark': $dark,
+	'darkLight': $darkLight,
+	'customBlue': $customBlue,
+	'customBlueMarguerite': $customBlueMarguerite
+);
+
 $theme-fonts: (
 	300: 'Light',
 	400: 'Regular',
-	500: 'Medium',
-	700: 'Bold',
-	900: 'Black'
+	500: 'Medium'
 );
 
 //BASE
-$font-family-base: Poppins;
+$font-family-base: Rubik;
 $font-size-base: 1rem;
 $font-weight-base: 400;
 $body-bg: #fff;
