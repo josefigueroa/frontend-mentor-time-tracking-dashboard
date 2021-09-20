@@ -7,8 +7,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const rulesForCss = {
   test: /\.scss$/,   
   use: [
-    MiniCssExtractPlugin.loader,
-    // 'style-loader',
+    // MiniCssExtractPlugin.loader,
+    'style-loader',
     {
       loader: "css-loader",
       options: {
@@ -63,9 +63,9 @@ const devConfig = {
     new HtmlWebpackPlugin({
       template: './src/views/index.html',
     }),
-    new MiniCssExtractPlugin({
-      filename: 'css/style.[contenthash].css'
-    })
+    // new MiniCssExtractPlugin({
+    //   filename: 'css/style.[contenthash].css'
+    // })
   ],
   devtool: 'eval-source-map'
 }

@@ -1,0 +1,8 @@
+@use '../abstratcs/' as *;
+
+.section-columns{
+  @include breakpoint('large'){
+    display: flex;
+    gap:  rem(30);
+  }
+}

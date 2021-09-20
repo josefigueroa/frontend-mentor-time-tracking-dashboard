@@ -1,0 +1,87 @@
+@use '../abstratcs/' as *;
+
+.profile{  
+  background-color: $darkLight;
+  border-radius: rem(13);
+  margin-bottom: rem(24);
+  @include breakpoint('large'){
+    max-width: rem(255);
+    width: 100%;
+    margin-bottom: 0;
+  }
+  &__user{
+    background-color: $primary;
+    border-radius: rem(13);
+    padding: rem(30);
+
+    display: flex;
+    align-items: center;
+    @include breakpoint('large'){
+      display: block;
+      padding: rem(34) rem(30);
+    }
+  }
+  &__img {
+    width: rem(70);
+    height: rem(70);
+    border: 3px solid $white;
+    border-radius: 50%;
+    margin-right: rem(16);
+    @include breakpoint('large'){
+      width: rem(85);
+      height: rem(85);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__label{
+    opacity: .5;
+    font-size: rem(14);
+    margin-bottom: rem(5);
+    display: block;
+  }
+  &__name{
+    margin: 0;
+    font-weight: 300;
+    @include breakpoint('large'){
+      font-size: rem(40);
+      padding-bottom: rem(46);
+    }
+  }
+
+  &__nav{
+    padding-top: rem(25); 
+    padding-bottom: rem(25);
+    padding-left: rem(30); 
+    padding-right: rem(16);
+    @include breakpoint('large'){
+      padding-bottom: rem(30);
+    }
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint('large'){
+      flex-direction: column;
+    }
+  }
+  &__item{
+    &:not(:last-child){
+      @include breakpoint('large'){      
+        margin-bottom: rem(24.5);
+      }
+    }
+  }
+
+  &__link{
+    color: $customBlueMarguerite;
+    &:hover,
+    &--active{
+      color: $white;
+    }
+    @include breakpoint('large'){
+      font-size: rem(18);
+    }
+  }
+}

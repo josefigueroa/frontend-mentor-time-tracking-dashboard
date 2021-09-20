@@ -50,6 +50,7 @@ $info: $softBlue;
 $info-alt: $violet;
 $success: $limeGreen;
 $danger: $red;
+$danger-alt: $orange;
 $warning: $yellow;
 $customBlue: $paleBlue;
 $customBlueMarguerite: $blueMarguerite;
@@ -62,6 +63,7 @@ $theme-colors: (
 	'info-alt': $info-alt,
 	'success': $success,
 	'danger': $danger,
+	'danger-alt': $danger-alt,
 	'warning': $warning,
 	'white': $white,
 	'dark': $dark,
@@ -80,9 +82,36 @@ $theme-fonts: (
 $font-family-base: Rubik;
 $font-size-base: 1rem;
 $font-weight-base: 400;
-$body-bg: #fff;
+$body-bg: $dark;
 
 //PATH
 $img-path: '../img';
 $fonts-path: '../fonts';
 
+$card-bg:(
+	'work': (
+		'background': $danger-alt,
+		'img': 'icon-work'	
+	),
+	'play': (
+		'background': $info,
+		'img': 'icon-play'	
+	),
+	'study': (
+		'background': $danger,
+		'img': 'icon-study'	
+	),
+	'exercise': (
+		'background': $success,
+		'img': 'icon-exercise'	
+	),
+	'social': (
+		'background': $info-alt,
+		'img': 'icon-social'	
+	),
+	'self-care': (
+		'background': $warning,
+		'img': 'icon-self-care'	
+	)
+
+)

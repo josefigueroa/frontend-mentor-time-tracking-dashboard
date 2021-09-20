@@ -11,3 +11,22 @@
 		@content;
 	}
 }
+
+@mixin card-bg(){
+	@each $k, $val in $card-bg{
+    $img: map-get($val, 'img');
+    &--#{$k}{
+      background-color: map-get($val, 'background');
+      &:before{
+        content: '';     
+        position: absolute;
+        bottom: 100%;
+        top: 0;
+        right: 0;
+        background: url('#{$img-path}/#{$img}.svg') no-repeat right 20px top -11px;
+        width: 100%;
+        height: 40px;
+      }
+    }
+	}
+}
