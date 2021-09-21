@@ -36,7 +36,23 @@ const rulesForJS = {
   }
 };
 
-const rules = [rulesForCss, rulesForJS];
+const rulesForImg = {
+  test: /\.(png|svg|jpg|jpeg|gif)$/i,
+  type: 'asset/resource',
+  generator: {
+    filename: 'img/[hash][ext][query]'
+  }
+};
+
+const rulesForFonts = {
+  test: /\.(woff|woff2|eot|ttf|otf)$/i,
+  type: 'asset/resource',
+  generator: {
+    filename: 'fonts/[hash][ext][query]'
+  }
+};
+
+const rules = [rulesForCss, rulesForJS, rulesForImg, rulesForFonts];
 
 
 const devConfig = {

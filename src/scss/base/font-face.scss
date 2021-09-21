@@ -8,7 +8,7 @@
       url('#{$fonts-path}/Rubik/Rubik-#{$value}.ttf') format('truetype');
     font-style: normal;
     font-weight: #{$key};
-    text-rendering: optimizeLegibility;
+    // text-rendering: optimizeLegibility;
     font-display: swap;
   }
 }

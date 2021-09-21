@@ -63,13 +63,14 @@ const rulesForData =   {
 };
 
 
-const rules = [rulesForHTML, rulesForFonts, rulesForImg, rulesForCss, rulesForJS, rulesForData];
+const rules = [rulesForHTML, rulesForFonts, rulesForImg, rulesForCss, rulesForJS];
 
 const prodConfig = {
   mode: 'production',
   module: { rules },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: 'body',
       template: './src/views/index.html',
     }),
     new MiniCssExtractPlugin({
