@@ -3,21 +3,10 @@ const merge = require('merge-descriptors');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const rulesForCss = {
-  test: /\.scss$/,   
+const rulesForHTML =   {
+  test:/\.html$/,
   use: [
-    MiniCssExtractPlugin.loader,
-    // 'style-loader',
-    'css-loader',
-    {
-      loader: "sass-loader",
-      options: {
-        sourceMap: false,
-        sassOptions: {
-          outputStyle: "compressed",
-        },
-      },
-    }
+    'html-loader'
   ]
 };
 
@@ -35,6 +24,24 @@ const rulesForFonts = {
   generator: {
     filename: 'fonts/[hash][ext][query]'
   }
+};
+
+const rulesForCss = {
+  test: /\.scss$/,   
+  use: [
+    MiniCssExtractPlugin.loader,
+    // 'style-loader',
+    'css-loader',
+    {
+      loader: "sass-loader",
+      options: {
+        sourceMap: false,
+        sassOptions: {
+          outputStyle: "compressed",
+        },
+      },
+    }
+  ]
 };
 
 const rulesForJS = {
@@ -55,7 +62,8 @@ const rulesForData =   {
   }
 };
 
-const rules = [rulesForFonts, rulesForImg, rulesForCss, rulesForJS, rulesForData];
+
+const rules = [rulesForHTML, rulesForFonts, rulesForImg, rulesForCss, rulesForJS, rulesForData];
 
 const prodConfig = {
   mode: 'production',

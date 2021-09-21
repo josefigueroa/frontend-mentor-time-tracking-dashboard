@@ -5,9 +5,7 @@
   border-radius: rem(13);
   margin-bottom: rem(24);
   @include breakpoint('large'){
-    max-width: rem(255);
-    width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 0;    
   }
   &__user{
     background-color: $primary;
@@ -62,6 +60,9 @@
   &__list{
     display: flex;
     justify-content: space-between;
+    @include breakpoint('small'){
+      justify-content: space-evenly;
+    }
     @include breakpoint('large'){
       flex-direction: column;
     }
@@ -78,6 +79,7 @@
     color: $customBlueMarguerite;
     &:hover,
     &--active{
+      transition: .4s;
       color: $white;
     }
     @include breakpoint('large'){

@@ -12,3 +12,12 @@
     padding: 0;
   }
 }
+
+.grid-section{
+  @include breakpoint('large'){
+    display: grid;
+    grid-template-columns: rem(255) 1fr;
+    grid-template-rows: rem(518);
+    gap: rem(30);
+  }
+}
